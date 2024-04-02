@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+</head>
+<body>
+    <h1>Confirmation</h1>
+    <form method="post" action="{{ url_for('confirm') }}">
+        {% for key, value in data.items() %}
+            <p><strong>{{ key }}:</strong> {{ value }}</p>
+        {% endfor %}
+        <p>Confirm submission?</p>
+        <button type="submit" name="confirm" value="yes">Yes</button>
+        <button type="submit" name="confirm" value="no">No (Edit)</button>
+    </form>
+</body>
+</html>

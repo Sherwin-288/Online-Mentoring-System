@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Selection Page</title>
+</head>
+<body>
+    <h1>Welcome, Admin!</h1>
+    <form method="POST" action="{{ url_for('admin_selection') }}">
+        <label for="department">Select Department:</label>
+        <select name="department" id="department">
+            {% for dept in departments %}
+                <option value="{{ dept[0] }}">{{ dept[1] }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="semester">Select Semester:</label>
+        <select name="semester" id="semester">
+            {% for sem in semesters %}
+                <option value="{{ sem[0] }}">{{ sem[0] }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <!-- Add more dropdowns for divisions if needed -->
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

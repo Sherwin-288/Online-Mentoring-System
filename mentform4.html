@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student extra-curricular activities</title>
+    <style>
+        label {
+            align-content: center;
+            width: 100px;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        body {
+            background-image: url('http://www.euroforum.es/blog/wp-content/uploads/2016/11/coaching_and_mentoring.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        #form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            background: rgba(160, 32, 240, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            color: white;
+            width: 750px;
+            padding: 5px;
+        }
+
+        #submit {
+            text-align: center;
+            width: 100px;
+            color: teal;
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <h2>Student's Extra-curricular Activities</h2>
+        <form action="/submit" method="post">
+            <h4 style="color: black;">Select your semester</h4>
+            <label>ROLL NO:</label>
+            <input type="text" name="roll_no" placeholder="Enter your roll no.:" required><br><br>
+            <label for="seme">SEMESTER:</label>
+            <select name="seme" id="seme">
+                <option value="sem1">SEM 1</option>
+                <option value="sem2">SEM 2</option>
+                <option value="sem3">SEM 3</option>
+                <option value="sem4">SEM 4</option>
+                <option value="sem5">SEM 5</option>
+                <option value="sem6">SEM 6</option>
+                <option value="sem7">SEM 7</option>
+                <option value="sem8">SEM 8</option>
+            </select><br><br>
+            <h4 style="color: black;">Enter your extra-curricular details:</h4>
+            <label>SPORTS:</label>
+            <input type="text" name="sports" placeholder="Enter your sports details" required><br><br>
+            <label>NSS/SOCIAL CELL:</label>
+            <input type="text" name="nsssocialcell" placeholder="Enter your nss/social cell details" required><br><br>
+            <label>Competition / Participation / Prize / Awards :</label>
+            <input type="text" name="comp" placeholder="Enter your details" required><br><br>
+            <input type="submit" value="Submit" id="submit">
+            <a href="view3.jsp">VIEW DETAILS</a>
+        </form>
+    </div>
+</body>
+</html>

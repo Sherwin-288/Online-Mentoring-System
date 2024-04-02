@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login Form</title>
+    <style type="text/css">
+        body {
+            background-image: url('https://media.istockphoto.com/vectors/vector-background-vector-id1168080557?b=1&k=6&m=1168080557&s=170667a&w=0&h=fSMtYXkvXEkRvwv0eg7QtVUZwAotyBFY5LzuE24IlT4=');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #form {
+            background: rgba(160, 32, 240, 0.7);
+            border-radius: 20px;
+            color: white;
+            width: 400px;
+            padding: 50px;
+            margin: 50px auto;
+        }
+
+        h1 {
+            color: white;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            background-color: #0074e8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <h1>Welcome to Our Application</h1>
+
+        <form action="" method="post">
+            <button type="submit" formaction="{{ url_for('admin_login') }}">Login as Admin</button>
+            <button type="submit" formaction="{{ url_for('hod_login') }}">Login as HOD</button>
+            <button type="submit" formaction="{{ url_for('mentor_login') }}">Login as Mentor</button>
+            <button type="submit" formaction="{{ url_for('student_login') }}">Login as Student</button>
+        </form>
+    </div>
+</body>
+</html>

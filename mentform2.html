@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Details</title>
+    <style>
+        label {
+            align-content: center;
+            width: 100px;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        #form {
+            border-radius: 20px;
+            background: skyblue;
+            color: white;
+            width: 1000px;
+            padding: 5px;
+        }
+
+        #submit {
+            text-align: center;
+            width: 100px;
+            color: teal;
+        }
+
+        td,
+        th {
+            border: 1px solid rgb(190, 190, 190);
+            padding: 10px;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        th[scope="col"] {
+            background-color: #696969;
+            color: #fff;
+        }
+
+        th[scope="row"] {
+            background-color: #d7d9f2;
+        }
+
+        caption {
+            padding: 10px;
+            caption-side: bottom;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(200, 200, 200);
+            letter-spacing: 1px;
+            font-family: sans-serif;
+            font-size: .8rem;
+        }
+
+        table {
+            empty-cells: hide;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Mentoring Form</h2>
+    <div id="form">
+        <h3>Student's Placement Record</h3>
+        <form action="/submit" method="post">
+            <label>ROLL NO:</label>
+            <input type="text" name="roll_no" placeholder="Enter your roll no.:" required><br><br>
+            <label>COMPANY:</label>
+            <input type="text" name="company" placeholder="Enter the name of company" required><br><br>
+            <label>PACKAGE:</label>
+            <input type="text" name="pack" placeholder="Enter the amount of package" required><br><br>
+            <label>HIGHER STUDIES:</label>
+            <table>
+                <tr>
+                    <th scope="col">EXAM</th>
+                    <th scope="col">GRE</th>
+                    <th scope="col">TOFEL</th>
+                    <th scope="col">CAT</th>
+                    <th scope="col">GATE</th>
+                </tr>
+                <tr>
+                    <th scope="row">SCORE</th>
+                    <td><input name="score1" required></td>
+                    <td><input name="score2" required></td>
+                    <td><input name="score3" required></td>
+                    <td><input name="score4" required></td>
+                </tr>
+            </table><br>
+            <input type="submit" value="Submit" id="submit">
+            <a href="view7.jsp">VIEW DETAILS</a>
+        </form>
+    </div>
+</body>
+</html>

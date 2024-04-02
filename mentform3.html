@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Co-curricular activities</title>
+    <style>
+        label {
+            align-content: center;
+            width: 100px;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        #form {
+            border-radius: 20px;
+            background: skyblue;
+            color: white;
+            width: 1000px;
+            padding: 5px;
+        }
+
+        #submit {
+            text-align: center;
+            width: 100px;
+            color: teal;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student's Co-curricular Activities</h2>
+    <div id="form">
+        <form action="/submit" method="post">
+            <h4 style="color: black;">Select your semester</h4>
+            <label>ROLL NO:</label>
+            <input type="text" name="roll_no" placeholder="Enter your roll no.:" required><br><br>
+            <label for="sem">SEMESTER:</label>
+            <select name="seme" id="sem">
+                <option value="sem1">SEM 1</option>
+                <option value="sem2">SEM 2</option>
+                <option value="sem3">SEM 3</option>
+                <option value="sem4">SEM 4</option>
+                <option value="sem5">SEM 5</option>
+                <option value="sem6">SEM 6</option>
+                <option value="sem7">SEM 7</option>
+                <option value="sem8">SEM 8</option>
+            </select><br><br>
+            <h4 style="color: black;">Enter your Co-curricular Details:</h4>
+            <label>Professional Society:</label>
+            <input type="text" name="perform" placeholder="Enter your performance" required><br><br>
+            <label>Internship:</label>
+            <input type="text" name="internship" placeholder="Enter your company name" required><br><br>
+            <label>Papers Published:</label>
+            <input type="text" name="published" placeholder="Enter name of paper published" required><br><br>
+            <input type="submit" value="Submit" id="submit">
+            <a href="view4.jsp">VIEW DETAILS</a>
+        </form>
+    </div>
+</body>
+</html>

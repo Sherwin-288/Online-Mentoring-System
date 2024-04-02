@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mentoring Form</title>
+    <style>
+        label {
+            align-content: center;
+            width: 100px;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        #form {
+            border-radius: 20px;
+            background: skyblue;
+            color: white;
+            width: 1000px;
+            padding: 5px;
+        }
+
+        #submit {
+            text-align: center;
+            width: 100px;
+            color: teal;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Mentoring Form</h2>
+    <div id="form">
+        <h3>Student Mentor's Feedback Semesterwise</h3>
+        <form action="/submit" method="post">
+            <label>ROLL NO:</label>
+            <input type="text" name="roll_no" placeholder="Enter your roll no.:" required><br><br>
+
+            <table>
+                <tr>
+                    <th>SEMESTER 1</th>
+                    <th>SEMESTER 2</th>
+                    <th>SEMESTER 3</th>
+                    <th>SEMESTER 4</th>
+                </tr>
+                <tr>
+                    <td><input name="score1" required></td>
+                    <td><input name="score2" required></td>
+                    <td><input name="score3" required></td>
+                    <td><input name="score4" required></td>
+                </tr>
+            </table><br>
+            <table>
+                <tr>
+                    <th>SEMESTER 5</th>
+                    <th>SEMESTER 6</th>
+                    <th>SEMESTER 7</th>
+                    <th>SEMESTER 8</th>
+                </tr>
+                <tr>
+                    <td><input name="score5" required></td>
+                    <td><input name="score6" required></td>
+                    <td><input name="score7" required></td>
+                    <td><input name="score8" required></td>
+                </tr>
+            </table><br>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+</body>
+</html>

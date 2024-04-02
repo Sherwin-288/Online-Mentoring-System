@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        label {
+            align-content: center;
+            width: 100px;
+            display: inline-block;
+            margin: 5px;
+        }
+        body {
+            background-image: url('https://media.istockphoto.com/vectors/vector-background-vector-id1168080557?b=1&k=6&m=1168080557&s=170667a&w=0&h=fSMtYXkvXEkRvwv0eg7QtVUZwAotyBFY5LzuE24IlT4=');
+            background-size: cover;
+            background-repeat: repeat;
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+        h2 {
+            text-align: left;
+        }
+        h3 {
+            text-align: left;
+        }
+        #form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-25%);
+            border-radius: 20px;
+            background: skyblue;
+            background: rgba(52, 152, 219, 0.7);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            color: white;
+            width: 750px;
+            padding: 5px;
+        }
+        #submit {
+            text-align: center;
+            width: 100px;
+            color: teal;
+        }
+    </style>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Student Mentoring Form</h2>
+    <div id="form">
+        <h3>Student's Personal Details</h3>
+        <form action="/submit_form" method="post">
+            <label>NAME:</label>
+            <input type="text" name="name" placeholder="Enter your name"><br><br>
+            <label> ROLL NO:</label>
+            <input type="text" name="roll_no" placeholder="Enter your roll no"><br><br>
+            <label> DATE OF BIRTH:</label>
+            <input type="date" name="dob" placeholder="Enter your date of birth"><br><br>
+            <label> GENDER:</label>
+            <input type="radio" name="gender" value="male">M
+            <input type="radio" name="gender" value="female">F
+            <input type="radio" name="gender" value="other">other<br>
+            <label>ADDRESS:</label>
+            <input type="text" name="addr" placeholder="Enter your address"><br><br>
+            <label>MOBILE NO.:SS</label>
+            <input type="number" name="mno1" maxlength="10"><br><br>
+            <label>MAIL ID:</label>
+            <input type="text" name="mail1" placeholder="Enter your mail id"><br><br>
+            <label>FATHER'S NAME:</label>
+            <input type="text" name="fname" placeholder="Enter the name"><br><br>
+            <label>MOBILE NUMBER:</label>
+            <input type="text" name="mno2" maxlength="10"><br><br>
+            <label>MAIL ID:</label>
+            <input type="text" name="mail2" placeholder="Enter your mail id"><br><br>
+            <label>MOTHER'S NAME:</label>
+            <input type="text" name="mname" placeholder="Enter the name"><br><br>
+            <label>MOBILE NUMBER:</label>
+            <input type="text" name="mno3" maxlength="10" ><br><br>
+            <label>MAIL ID:</label>
+            <input type="text" name="mail3" placeholder="Enter your mail id"><br><br>
+            <label>NAME OF FACULTY MEMBER:</label>
+            <input type="text" name="facname" placeholder="Enter the name"><br><br>
+            <label>DESIGNATION:</label>
+            <input type="text" name="dsg" placeholder="Enter the designation"><br><br>
+            <label>DEPARTMENT:</label>
+            <select name="dept" id="sem">
+              <option value="IT">IT</option>
+              <option value="MECH">MECH</option>
+              <option value="ELEC">ELEC</option>
+              <option value="EXTC">EXTC</option>
+              <option value="COMP">COMP</option>
+            </select><br><br>
+            <label> NAME OF STUDENTS MENTOR:</label>
+            <input type="text" name="mentname" placeholder="Enter the name"><br><br>
+            <label>MOBILE NUMBER:</label>
+            <input type="text" name="mno4" maxlength="10" ><br><br>
+            <label>MAIL ID:</label>
+            <input type="text" name="mail4" placeholder="Enter your mail id"><br><br>
+            <input type="submit" name="SUBMIT" id="submit">
+            <a href="/view_details">VIEW DETAILS</a> <!-- Assuming this is a link to view details -->
+        </form>
+    </div>
+</body>
+</html>
+
